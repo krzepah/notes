@@ -1,5 +1,5 @@
 
-import { connect } from 'unistore/preact';
+import { connect } from 'mutastore/preact';
 
 import InputBase from './base';
 import { createEntry } from 'Store/entry';
