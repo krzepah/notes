@@ -1,0 +1,57 @@
+import createStore from 'unistore'
+
+let store = createStore({
+  records: {
+    byId: {
+      'record-1': {
+        id: 'record-1',
+        date: '1/6/2019',
+        content: 'Foo',
+        selected: false,
+        entries: [
+          'entry-1',
+          'entry-2'
+        ]
+      },
+      'record-2': {
+        id: 'record-2',
+        date: '2/6/2019',
+        content: 'Bar',
+        selected: false,
+        entries: []
+      },
+      'record-3': {
+        id: 'record-3',
+        date: '3/6/2019',
+        content: 'Baz',
+        selected: false,
+        entries: []
+      }
+    },
+    allIds: ['record-3', 'record-2', 'record-1']
+  },
+  entries: {
+      byId: {
+      'entry-1': {
+        id: 'entry-1',
+        date: '03:59:32',
+        selected: false,
+        content: '<a href="https://stackoverflow.com/questions/3296644/hiding-the-scrollbar-on-an-html-page">foo</a>'
+      },
+      'entry-2': {
+        id: 'entry-2',
+        date: '04:12:22',
+        selected: false,
+        content: 'foo'
+      }
+    },
+    allIds: ['entry-1', 'entry-2']
+  }
+})
+
+store.subscribe( (state, action, update) => {
+  if (typeof window !== "undefined")
+    localStorage.setItem('user_data', JSON.stringify(state));
+})
+
+export default store;

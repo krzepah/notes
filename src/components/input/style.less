@@ -1,0 +1,74 @@
+input, textarea {
+  font-size: 18px;
+  padding: 7px;
+  border-radius: 3px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-sizing: padding-box;
+  overflow: hidden;
+  border: solid 0px;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  
+  resize: vertical;
+  min-height: 50px;
+  background: rgba(0,0,0,0);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+input:focus, textarea:focus {
+  font-weight: bold;
+}
+
+.inputcontainer {
+  margin-bottom: 42px;
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      padding: 9px;
+      color: rgba(33, 33, 33, .2);
+      transition: color .2s;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: #444;
+    }
+  }
+}
+
+.input, .inputblocked {
+  margin-top: 10px;
+  background: rgba(240, 240, 240, 1);
+  border-radius: 3px;
+  box-shadow: 2px 2px 8px rgba(black, .1);
+}
+
+.inputblocked {
+  padding: 2px;
+  color: rgba(#999);
+}
+
+.input {
+  -moz-transition: background .1s ease-in;
+  /* WebKit */
+  -webkit-transition: background .1s ease-in;
+  /* Opera */
+  -o-transition: background .1s ease-in;
+  /* Standard */
+  transition: background .1s ease-in;
+
+  display: flex;
+}
+
+.length {
+  margin: 10px;
+  color: rgba(33, 33, 33, .2);
+}

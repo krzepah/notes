@@ -1,0 +1,49 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: #FAFAFA;
+	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-weight: 400;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#app {
+	height: 100%;
+}
+
+::-webkit-scrollbar { 
+    display: none;
+    scrollbar-width: none;
+}
+
+.hash_tag {
+  margin-left: 5px;
+  margin-right: 5px;
+  border: solid 1px; 
+  padding: 3px;  
+  border-radius: 3px; 
+  border-color: #999; 
+} 
+.hash_tag:hover { 
+  transition: all .2s; 
+  background: #666; 
+  color: white; 
+}
+
+a {
+  color: #444;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #999;
+}
